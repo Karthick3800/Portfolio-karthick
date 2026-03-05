@@ -1,0 +1,84 @@
+{
+  "personalInfo": {
+    "name": "Karthick",
+    "title": "Junior Software Engineer",
+    "location": "Tirunelveli, Tamil Nadu",
+    "bio": "I am a passionate Software Engineer with hands-on industry experience at Brimma Tech, including practical experience in DevOps. I work on backend development, rule engine implementation, intelligent document processing, and deployment workflows. I have integrated Azure AI services, managed reporting databases, built Grafana dashboards, and contributed to CI/CD pipelines and cloud-based deployments. I enjoy solving complex problems and building scalable, reliable, and production-ready systems.",
+    "email": "karthickkdnl1@gmail.com",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/karthick233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    }
+  },
+  "skills": [
+    {
+      "name": "Java Script",
+      "category": "Programming"
+    },
+    {
+      "name": "TypeScript",
+      "category": "Programming"
+    },
+    {
+      "name": "ReactJS",
+      "category": "Frontend"
+    },
+    {
+      "name": "NodeJS",
+      "category": "Backend"
+    },
+    {
+      "name": "Java",
+      "category": "Backend"
+    },
+    {
+      "name": "video editting",
+      "category": "Design"
+    },
+    {
+      "name": "Photography",
+      "category": "Hobby"
+    }
+  ],
+  "projects": [
+    {
+      "id": 5,
+      "title": "FarAway",
+      "description": "A React-based tour packing list application utilizing state management to streamline packing with interactive item tracking.",
+      "tech": [
+        "ReactJS"
+      ],
+      "link": "https://karthick-faraway.netlify.app/"
+    },
+    {
+      "id": 2,
+      "title": "QR Code Generator",
+      "description": "A responsive and interactive QR code generator built with NodeJS, HTML, and CSS.",
+      "tech": [
+        "NodeJS",
+        "HTML",
+        "CSS"
+      ],
+      "link": "https://github.com/Karthick3800/Qr-Code-generator"
+    },
+    {
+      "id": 3,
+      "title": "Railway Ticket Reservation",
+      "description": "A comprehensive system offering features like ticket booking, cancellation, waiting list management, and RAC, providing a seamless reservation experience.",
+      "tech": [
+        "JAVA"
+      ],
+      "link": "https://github.com/Karthick3800/RailwayTicket-Management-System"
+    },
+    {
+      "id": 4,
+      "title": "BankList",
+      "description": "The ultimate app for effortless bank account management, simplifying finances with an intuitive interface.",
+      "tech": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ],
+      "link": "https://banklist-iota.vercel.app/"
+    }
+  ]
+}
