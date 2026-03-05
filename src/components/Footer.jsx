@@ -16,7 +16,7 @@ const Footer = () => {
                 <h2 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '1.5rem' }}>
                     <span style={{ color: 'var(--primary)' }}>K</span>arthick
                 </h2>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+                <div className="footer-links" style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>

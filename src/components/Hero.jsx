@@ -13,13 +13,14 @@ const Hero = () => {
             alignItems: 'center',
             padding: '120px 0 60px'
         }}>
-            <div className="container" style={{
+            <div className="container hero-container" style={{
                 display: 'grid',
                 gridTemplateColumns: '1.2fr 0.8fr',
                 gap: '4rem',
                 alignItems: 'center'
             }}>
                 <motion.div
+                    className="hero-text"
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8 }}
@@ -32,11 +33,11 @@ const Hero = () => {
                     <h2 style={{ fontSize: '2.5rem', color: 'var(--text-muted)', marginBottom: '2rem', fontWeight: '500' }}>
                         {personalInfo.title}
                     </h2>
-                    <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '600px', marginBottom: '3rem' }}>
+                    <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
                         {personalInfo.bio}
                     </p>
 
-                    <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+                    <div className="hero-buttons" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                         <motion.a
                             href="#contact"
                             whileHover={{ scale: 1.05 }}
@@ -69,11 +70,12 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div
+                    className="hero-image-container"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
-                    style={{ position: 'relative' }}
+                    style={{ position: 'relative', width: '100%', maxWidth: '400px', justifySelf: 'center' }}
                 >
                     <div style={{
                         position: 'absolute',

@@ -79,8 +79,37 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile Toggle would go here if needed, but keeping it simple for now */}
+                {/* Mobile Toggle Button */}
+                <button 
+                    className="mobile-menu-btn"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
+                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                </button>
             </div>
+
+            {/* Mobile Menu Dropdown */}
+            {isOpen && (
+                <motion.div 
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    className="mobile-menu"
+                >
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            onClick={() => setIsOpen(false)}
+                            style={{ transition: 'color 0.3s' }}
+                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
+                            onMouseLeave={(e) => e.target.style.color = 'var(--text-main)'}
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </motion.div>
+            )}
         </nav>
     );
 };

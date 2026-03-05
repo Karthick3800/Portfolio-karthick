@@ -115,3 +115,108 @@ html {
   background-color: var(--primary);
   color: black;
 }
+
+/* Responsive Design */
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 2rem !important;
+  }
+  .hero-image-container {
+    max-width: 250px !important;
+    margin: 0 auto !important;
+  }
+  .hero-text h1 {
+    font-size: 2.2rem !important;
+  }
+  .hero-text h2 {
+    font-size: 1.2rem !important;
+  }
+  .hero-text p {
+    font-size: 0.95rem !important;
+    margin-bottom: 2rem !important;
+  }
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem !important;
+  }
+  .about-container {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  .about-highlights {
+    grid-template-columns: 1fr !important;
+  }
+  .desktop-menu {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: block !important;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .footer-links {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  section {
+    padding: 60px 0 !important;
+  }
+  #home {
+    padding: 100px 0 40px !important;
+  }
+  .container {
+    padding: 0 1.2rem;
+  }
+  .glass {
+    padding: 1.2rem !important; /* compressed view */
+  }
+  section h2 {
+    font-size: 2rem !important;
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.mobile-menu a {
+  padding: 1rem 2rem;
+  text-align: center;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-main);
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}

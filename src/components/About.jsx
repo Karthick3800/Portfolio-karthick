@@ -42,7 +42,7 @@ const About = () => {
     return (
         <section id="about" style={{ padding: '100px 0' }}>
             <div className="container">
-                <div style={{
+                <div className="about-container" style={{
                     display: 'grid',
                     gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
                     gap: '4rem',
@@ -79,6 +79,7 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
+                        className="about-highlights"
                         style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}
                     >
                         {highlights.map((item, index) => (

@@ -24,7 +24,7 @@ const Projects = () => {
                     </p>
                 </motion.div>
 
-                <div style={{
+                <div className="projects-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
                     gap: '2rem'

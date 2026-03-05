@@ -26,7 +26,7 @@ const Skills = () => {
                     </p>
                 </motion.div>
 
-                <div style={{
+                <div className="skills-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
                     gap: '2rem'
