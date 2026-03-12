@@ -72,23 +72,25 @@ const Projects = () => {
                                     ))}
                                 </div>
 
-                                <div style={{ display: 'flex', gap: '1rem' }}>
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            gap: '0.5rem',
-                                            fontSize: '0.9rem',
-                                            fontWeight: '600',
-                                            color: 'var(--primary)'
-                                        }}
-                                    >
-                                        View Project <ExternalLink size={16} />
-                                    </a>
-                                </div>
+                                {project.link && (
+                                    <div style={{ display: 'flex', gap: '1rem' }}>
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                gap: '0.5rem',
+                                                fontSize: '0.9rem',
+                                                fontWeight: '600',
+                                                color: 'var(--primary)'
+                                            }}
+                                        >
+                                            View Project <ExternalLink size={16} />
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}

@@ -52,27 +52,14 @@ const Background = () => {
 const BackgroundStyled = () => {
   return (
     <div style={{
-      fixed: 'inset-0',
       position: 'fixed',
-      top: 0,
-      left: 0,
-      right: 0,
-      bottom: 0,
+      inset: 0,
       zIndex: -10,
       overflow: 'hidden',
       backgroundColor: '#050505'
     }}>
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          x: [0, 100, 0],
-          y: [0, 50, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+      <div
+        className="blob-1"
         style={{
           position: 'absolute',
           top: '-10%',
@@ -85,17 +72,8 @@ const BackgroundStyled = () => {
           filter: 'blur(120px)'
         }}
       />
-      <motion.div
-        animate={{
-          scale: [1, 1.3, 1],
-          x: [0, -150, 0],
-          y: [0, 100, 0],
-        }}
-        transition={{
-          duration: 25,
-          repeat: Infinity,
-          ease: "linear",
-        }}
+      <div
+        className="blob-2"
         style={{
           position: 'absolute',
           top: '20%',
@@ -106,6 +84,20 @@ const BackgroundStyled = () => {
           backgroundColor: 'var(--secondary)',
           opacity: 0.15,
           filter: 'blur(120px)'
+        }}
+      />
+      <div
+        className="blob-3"
+        style={{
+          position: 'absolute',
+          bottom: '-10%',
+          left: '20%',
+          height: '400px',
+          width: '400px',
+          borderRadius: '50%',
+          backgroundColor: 'var(--primary)',
+          opacity: 0.08,
+          filter: 'blur(100px)'
         }}
       />
       <div style={{

@@ -56,7 +56,7 @@ const About = () => {
                         viewport={{ once: true }}
                     >
                         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem' }}>
-                            <div style={{ backgroundColor: 'rgba(51, 255, 0, 0.1)', padding: '0.75rem', borderRadius: '0.75rem', color: 'var(--primary)' }}>
+                            <div style={{ backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '0.75rem', borderRadius: '0.75rem', color: 'var(--primary)' }}>
                                 <User size={24} />
                             </div>
                             <h2 style={{ fontSize: '2.5rem', fontWeight: '800' }}>About <span className="gradient-text">Me</span></h2>
@@ -84,7 +84,7 @@ const About = () => {
                     >
                         {highlights.map((item, index) => (
                             <div key={index} className="glass" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <div style={{ color: 'var(--primary)', backgroundColor: 'rgba(51, 255, 0, 0.1)', padding: '0.75rem', borderRadius: '0.75rem', width: 'fit-content' }}>
+                                <div style={{ color: 'var(--primary)', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '0.75rem', borderRadius: '0.75rem', width: 'fit-content' }}>
                                     {item.icon}
                                 </div>
                                 <div>

@@ -45,17 +45,24 @@ const Contact = () => {
                         }}
                     >
                         {/* Email Card */}
-                        <div className="glass" style={{
-                            padding: '1.5rem',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            textAlign: 'center',
-                            gap: '1rem',
-                            height: '100%'
-                        }}>
+                        <motion.a 
+                            href={`mailto:${personalInfo.email}`}
+                            className="glass" 
+                            whileHover={{ y: -5, borderColor: 'var(--primary)', backgroundColor: 'var(--bg-card)' }}
+                            style={{
+                                padding: '1.5rem',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                                textAlign: 'center',
+                                gap: '1rem',
+                                height: '100%',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s ease',
+                                textDecoration: 'none'
+                            }}>
                             <div style={{
-                                backgroundColor: 'rgba(51, 255, 0, 0.1)',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
                                 padding: '0.75rem',
                                 borderRadius: '0.75rem',
                                 color: 'var(--primary)',
@@ -74,7 +81,7 @@ const Contact = () => {
                                     color: 'white'
                                 }}>{personalInfo.email}</div>
                             </div>
-                        </div>
+                        </motion.a>
 
                         {/* Location Card */}
                         <div className="glass" style={{
@@ -87,7 +94,7 @@ const Contact = () => {
                             height: '100%'
                         }}>
                             <div style={{
-                                backgroundColor: 'rgba(51, 255, 0, 0.1)',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
                                 padding: '0.75rem',
                                 borderRadius: '0.75rem',
                                 color: 'var(--primary)',
@@ -109,7 +116,7 @@ const Contact = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="glass"
-                            whileHover={{ y: -5, borderColor: 'var(--primary)', backgroundColor: 'rgba(51, 255, 0, 0.05)' }}
+                            whileHover={{ y: -5, borderColor: 'var(--primary)', backgroundColor: 'var(--bg-card)' }}
                             style={{
                                 padding: '1.5rem',
                                 display: 'flex',
@@ -119,11 +126,12 @@ const Contact = () => {
                                 gap: '1rem',
                                 height: '100%',
                                 cursor: 'pointer',
-                                transition: 'all 0.3s ease'
+                                transition: 'all 0.3s ease',
+                                textDecoration: 'none'
                             }}
                         >
                             <div style={{
-                                backgroundColor: 'rgba(51, 255, 0, 0.1)',
+                                backgroundColor: 'rgba(239, 68, 68, 0.1)',
                                 padding: '0.75rem',
                                 borderRadius: '0.75rem',
                                 color: 'var(--primary)',
@@ -133,7 +141,7 @@ const Contact = () => {
                             }}>
                                 <Linkedin size={24} />
                             </div>
-                            <div>
+                            <div style={{ width: '100%' }}>
                                 <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)', marginBottom: '0.25rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Social</div>
                                 <div style={{ fontWeight: '600', fontSize: '0.95rem', color: 'white' }}>LinkedIn Profile</div>
                             </div>

@@ -2,11 +2,12 @@
   "personalInfo": {
     "name": "Karthick",
     "title": "Junior Software Engineer",
-    "location": "Tirunelveli, Tamil Nadu",
-    "bio": "I am a passionate Software Engineer with hands-on industry experience at Brimma Tech, including practical experience in DevOps. I work on backend development, rule engine implementation, intelligent document processing, and deployment workflows. I have integrated Azure AI services, managed reporting databases, built Grafana dashboards, and contributed to CI/CD pipelines and cloud-based deployments. I enjoy solving complex problems and building scalable, reliable, and production-ready systems.",
-    "email": "karthickkdnl1@gmail.com",
+    "location": "Tamil Nadu, India",
+    "heroBio": "Software Engineer with production experience across backend development, Docker containerization, and CI/CD pipelines. I specialize in building reliable systems, REST APIs, and automated deployment workflows.",
+    "bio": "I am a passionate Software Engineer with hands-on industry experience at Brimma Tech, including practical experience in DevOps. I build REST APIs in Node.js, Express, and Java Spring Boot. I have integrated Azure AI services, managed PostgreSQL logical replication, built Grafana dashboards, and contributed to CI/CD pipelines using Azure DevOps and GitHub Actions. I enjoy solving complex problems and building scalable, reliable, and production-ready backend systems.",
+    "email": "karthickldn1@gmail.com",
     "socials": {
-      "linkedin": "https://www.linkedin.com/in/karthick233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      "linkedin": "https://www.linkedin.com/in/karthick233/"
     }
   },
   "skills": [
@@ -31,7 +32,7 @@
       "category": "Backend"
     },
     {
-      "name": "video editting",
+      "name": "video editing",
       "category": "Design"
     },
     {
@@ -41,16 +42,49 @@
   ],
   "projects": [
     {
-      "id": 5,
-      "title": "FarAway",
-      "description": "A React-based tour packing list application utilizing state management to streamline packing with interactive item tracking.",
+      "id": 1,
+      "title": "Gemini Chatbot",
+      "description": "Built a REST API using Spring Boot with a clean controller/service pattern; integrated Google Gemini API to handle AI prompt requests.",
       "tech": [
-        "ReactJS"
+        "Java",
+        "Spring Boot",
+        "Gemini API"
       ],
-      "link": "https://karthick-faraway.netlify.app/"
+      "link": "https://github.com/Karthick3800/Gemini-Chatbot"
     },
     {
       "id": 2,
+      "title": "Southern Spice UI",
+      "description": "A modern, responsive restaurant web application emphasizing efficient data management through props and a robust component structure.",
+      "tech": [
+        "ReactJS",
+        "CSS"
+      ],
+      "link": "https://github.com/Karthick3800/Southern-Spice"
+    },
+    {
+      "id": 3,
+      "title": "DocFlow Rule Engine Component",
+      "description": "Engineered rule-processing logic and modular Express middleware in TypeScript, integrating Azure Document Intelligence REST API.",
+      "tech": [
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "Azure AI"
+      ],
+      "link": ""
+    },
+    {
+      "id": 4,
+      "title": "Railway Ticket Reservation",
+      "description": "A comprehensive system offering features like ticket booking, cancellation, waiting list management, and RAC.",
+      "tech": [
+        "Java"
+      ],
+      "link": "https://github.com/Karthick3800/RailwayTicket-Management-System"
+    },
+    {
+      "id": 5,
       "title": "QR Code Generator",
       "description": "A responsive and interactive QR code generator built with NodeJS, HTML, and CSS.",
       "tech": [
@@ -61,24 +95,23 @@
       "link": "https://github.com/Karthick3800/Qr-Code-generator"
     },
     {
-      "id": 3,
-      "title": "Railway Ticket Reservation",
-      "description": "A comprehensive system offering features like ticket booking, cancellation, waiting list management, and RAC, providing a seamless reservation experience.",
+      "id": 6,
+      "title": "FarAway",
+      "description": "A React-based tour packing list application utilizing state management to streamline packing with interactive item tracking.",
       "tech": [
-        "JAVA"
+        "ReactJS"
       ],
-      "link": "https://github.com/Karthick3800/RailwayTicket-Management-System"
+      "link": "https://karthick-faraway.netlify.app/"
     },
     {
-      "id": 4,
-      "title": "BankList",
-      "description": "The ultimate app for effortless bank account management, simplifying finances with an intuitive interface.",
+      "id": 7,
+      "title": "URL Shortener",
+      "description": "A fast and efficient URL shortener service to generate and manage compact links.",
       "tech": [
-        "JavaScript",
-        "HTML",
-        "CSS"
+        "NodeJS",
+        "Express"
       ],
-      "link": "https://banklist-iota.vercel.app/"
+      "link": "https://github.com/Karthick3800/urlShortner"
     }
   ]
 }

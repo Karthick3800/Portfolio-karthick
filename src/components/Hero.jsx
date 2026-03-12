@@ -34,7 +34,7 @@ const Hero = () => {
                         {personalInfo.title}
                     </h2>
                     <p style={{ fontSize: '1.1rem', color: 'var(--text-muted)', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
-                        {personalInfo.bio}
+                        {personalInfo.heroBio}
                     </p>
 
                     <div className="hero-buttons" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
@@ -91,19 +91,11 @@ const Hero = () => {
                     }}></div>
                     <motion.div
                         whileHover={{ scale: 1.02 }}
-                        className="glass"
-                        style={{
-                            aspectRatio: '1',
-                            borderRadius: '2rem',
-                            overflow: 'hidden',
-                            border: '2px solid var(--glass-border)',
-                            transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-                        }}
+                        className="glass hero-image-wrapper"
                     >
                         <img
                             src="/profile-pic.jpg"
                             alt="Profile"
-                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                     </motion.div>
 

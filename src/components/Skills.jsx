@@ -56,7 +56,7 @@ const Skills = () => {
                                     .map((skill, index) => (
                                         <motion.div
                                             key={skill.name}
-                                            whileHover={{ scale: 1.05, backgroundColor: 'rgba(51, 255, 0, 0.15)' }}
+                                            whileHover={{ scale: 1.05, backgroundColor: 'rgba(239, 68, 68, 0.15)' }}
                                             style={{
                                                 padding: '0.5rem 1rem',
                                                 backgroundColor: 'var(--bg-card)',
