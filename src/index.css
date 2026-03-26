@@ -88,21 +88,41 @@ ul {
 
 /* Animations */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
 }
 
 .float {
   animation: float 3s ease-in-out infinite;
+}
+
+/* Cursor blink for typewriter */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  color: var(--primary);
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+}
+
+/* Dot pulse for "open to work" badge */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.4); }
+}
+
+.dot-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #22c55e;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 /* Optimized CSS Background Blobs */

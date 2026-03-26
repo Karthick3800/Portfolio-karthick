@@ -56,57 +56,72 @@ const BackgroundStyled = () => {
       inset: 0,
       zIndex: -10,
       overflow: 'hidden',
-      backgroundColor: '#050505'
+      backgroundColor: '#060608'
     }}>
+      {/* Dot-grid pattern */}
+      <div style={{
+        position: 'absolute',
+        inset: 0,
+        backgroundImage: 'radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px)',
+        backgroundSize: '32px 32px',
+        pointerEvents: 'none'
+      }} />
+
+      {/* Top-left red glow */}
       <div
         className="blob-1"
         style={{
           position: 'absolute',
-          top: '-10%',
-          left: '-10%',
-          height: '500px',
-          width: '500px',
+          top: '-8%',
+          left: '-8%',
+          height: '550px',
+          width: '550px',
           borderRadius: '50%',
-          backgroundColor: 'var(--primary)',
-          opacity: 0.15,
-          filter: 'blur(120px)'
+          background: 'radial-gradient(circle, #ef4444 0%, transparent 70%)',
+          opacity: 0.18,
+          filter: 'blur(80px)'
         }}
       />
+
+      {/* Right crimson glow */}
       <div
         className="blob-2"
         style={{
           position: 'absolute',
-          top: '20%',
-          right: '-10%',
-          height: '600px',
-          width: '600px',
+          top: '15%',
+          right: '-12%',
+          height: '650px',
+          width: '650px',
           borderRadius: '50%',
-          backgroundColor: 'var(--secondary)',
-          opacity: 0.15,
-          filter: 'blur(120px)'
+          background: 'radial-gradient(circle, #9f1239 0%, transparent 70%)',
+          opacity: 0.2,
+          filter: 'blur(100px)'
         }}
       />
+
+      {/* Bottom center subtle glow */}
       <div
         className="blob-3"
         style={{
           position: 'absolute',
-          bottom: '-10%',
-          left: '20%',
-          height: '400px',
-          width: '400px',
+          bottom: '-5%',
+          left: '30%',
+          height: '450px',
+          width: '450px',
           borderRadius: '50%',
-          backgroundColor: 'var(--primary)',
-          opacity: 0.08,
-          filter: 'blur(100px)'
+          background: 'radial-gradient(circle, #ef4444 0%, transparent 70%)',
+          opacity: 0.1,
+          filter: 'blur(90px)'
         }}
       />
+
+      {/* Vignette — darkens edges so content pops */}
       <div style={{
         position: 'absolute',
         inset: 0,
-        backgroundImage: "url('https://grainy-gradients.vercel.app/noise.svg')",
-        opacity: 0.3,
+        background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.65) 100%)',
         pointerEvents: 'none'
-      }}></div>
+      }} />
     </div>
   );
 };

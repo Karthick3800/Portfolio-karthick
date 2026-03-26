@@ -5,7 +5,7 @@
     "location": "Tamil Nadu, India",
     "heroBio": "Software Engineer with production experience across backend development, Docker containerization, and CI/CD pipelines. I specialize in building reliable systems, REST APIs, and automated deployment workflows.",
     "bio": "I am a passionate Software Engineer with hands-on industry experience, including practical experience in DevOps. I build REST APIs in Node.js, Express, and Java Spring Boot. I have integrated Azure AI services, managed PostgreSQL logical replication, built Grafana dashboards, and contributed to CI/CD pipelines using Azure DevOps and GitHub Actions. I enjoy solving complex problems and building scalable, reliable, and production-ready backend systems.",
-    "email": "karthickldn1@gmail.com",
+    "email": "karthickkdnl1@gmail.com",
     "socials": {
       "linkedin": "https://www.linkedin.com/in/karthick233/"
     }
@@ -45,21 +45,14 @@
       "id": 1,
       "title": "Gemini Chatbot",
       "description": "Built a REST API using Spring Boot with a clean controller/service pattern; integrated Google Gemini API to handle AI prompt requests.",
-      "tech": [
-        "Java",
-        "Spring Boot",
-        "Gemini API"
-      ],
+      "tech": ["Java", "Spring Boot", "Gemini API"],
       "link": "https://github.com/Karthick3800/Gemini-Chatbot"
     },
     {
       "id": 2,
       "title": "Southern Spice UI",
       "description": "A modern, responsive restaurant web application emphasizing efficient data management through props and a robust component structure.",
-      "tech": [
-        "ReactJS",
-        "CSS"
-      ],
+      "tech": ["ReactJS", "CSS"],
       "link": "https://github.com/Karthick3800/Southern-Spice"
     },
     {
@@ -70,7 +63,11 @@
         "Node.js",
         "Express",
         "TypeScript",
-        "Azure AI"
+        "Azure AI",
+        "Grafana",
+        "CI/CD",
+        "MongoDB",
+        "SQL"
       ],
       "link": ""
     },
@@ -78,39 +75,28 @@
       "id": 4,
       "title": "Railway Ticket Reservation",
       "description": "A comprehensive system offering features like ticket booking, cancellation, waiting list management, and RAC.",
-      "tech": [
-        "Java"
-      ],
+      "tech": ["Java"],
       "link": "https://github.com/Karthick3800/RailwayTicket-Management-System"
     },
     {
       "id": 5,
       "title": "QR Code Generator",
       "description": "A responsive and interactive QR code generator built with NodeJS, HTML, and CSS.",
-      "tech": [
-        "NodeJS",
-        "HTML",
-        "CSS"
-      ],
+      "tech": ["NodeJS", "HTML", "CSS"],
       "link": "https://github.com/Karthick3800/Qr-Code-generator"
     },
     {
       "id": 6,
       "title": "FarAway",
       "description": "A React-based tour packing list application utilizing state management to streamline packing with interactive item tracking.",
-      "tech": [
-        "ReactJS"
-      ],
+      "tech": ["ReactJS"],
       "link": "https://karthick-faraway.netlify.app/"
     },
     {
       "id": 7,
       "title": "URL Shortener",
       "description": "A fast and efficient URL shortener service to generate and manage compact links.",
-      "tech": [
-        "NodeJS",
-        "Express"
-      ],
+      "tech": ["NodeJS", "Express"],
       "link": "https://github.com/Karthick3800/urlShortner"
     }
   ]
