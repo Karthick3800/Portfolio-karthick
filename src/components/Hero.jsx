@@ -152,7 +152,7 @@ const Hero = () => {
                             View Work
                         </motion.a>
                         <motion.a
-                            href={personalInfo.socials.linkedin}
+                            href={personalInfo.socials.github}
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ y: -3, borderColor: 'var(--primary)', color: 'var(--primary)' }}

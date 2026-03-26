@@ -60,28 +60,6 @@ const About = () => {
                             </p>
                         </div>
 
-                        {/* Info row */}
-                        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                            {[
-                                { label: '📍 Location', value: personalInfo.location },
-                                { label: '📧 Email', value: personalInfo.email },
-                            ].map(item => (
-                                <div key={item.label} style={{
-                                    flex: '1 1 160px',
-                                    backgroundColor: 'rgba(255,255,255,0.03)',
-                                    border: '1px solid var(--glass-border)',
-                                    borderRadius: '0.75rem',
-                                    padding: '0.9rem 1.2rem'
-                                }}>
-                                    <div style={{ fontSize: '0.7rem', color: 'var(--text-muted)', marginBottom: '0.3rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: '600' }}>
-                                        {item.label}
-                                    </div>
-                                    <div style={{ fontSize: '0.85rem', fontWeight: '600', color: 'white', wordBreak: 'break-all' }}>
-                                        {item.value}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
                     </motion.div>
 
                     {/* Right — Highlights grid */}
