@@ -7,9 +7,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
+        const handleScroll = () => setIsScrolled(window.scrollY > 20);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -23,24 +21,21 @@ const Navbar = () => {
     ];
 
     return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black/50 backdrop-blur-lg py-4 border-b border-white/10' : 'bg-transparent py-6'}`}
-            style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                right: 0,
-                zIndex: 100,
-                transition: 'all 0.3s ease',
-                display: 'flex',
-                justifyContent: 'center',
-                padding: isScrolled ? '1rem 0' : '1.5rem 0',
-                backgroundColor: isScrolled ? 'rgba(0,0,0,0.5)' : 'transparent',
-                backdropFilter: isScrolled ? 'blur(10px)' : 'none',
-                borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.1)' : 'none'
-            }}
-        >
-            <div className="container" style={{
+        <nav style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 100,
+            backgroundColor: '#FFFFFF',
+            borderBottom: '2px solid #000',
+            boxShadow: isScrolled ? '0 4px 0 #000' : 'none',
+            transition: 'box-shadow 0.2s ease',
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '1rem 0'
+        }}>
+            <div style={{
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
@@ -48,13 +43,31 @@ const Navbar = () => {
                 maxWidth: '1200px',
                 padding: '0 2rem'
             }}>
-                <motion.div
+                {/* Logo */}
+                <motion.a
+                    href="#home"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    style={{ fontSize: '1.5rem', fontWeight: '800', cursor: 'pointer' }}
+                    style={{ display: 'inline-flex', alignItems: 'center', cursor: 'pointer', textDecoration: 'none' }}
                 >
-                    <span style={{ color: 'var(--primary)' }}>K</span>arthick
-                </motion.div>
+                    <span style={{
+                        backgroundColor: '#FFE500',
+                        color: '#0A0A0A',
+                        display: 'inline-block',
+                        padding: '0.1rem 0.4rem',
+                        border: '2px solid #000',
+                        fontFamily: 'var(--font-heading)',
+                        fontSize: '1.5rem',
+                        fontWeight: '900',
+                        lineHeight: '1.2'
+                    }}>K</span>
+                    <span style={{
+                        color: '#0A0A0A',
+                        fontFamily: 'var(--font-heading)',
+                        fontSize: '1.5rem',
+                        fontWeight: '900'
+                    }}>arthick</span>
+                </motion.a>
 
                 {/* Desktop Menu */}
                 <div style={{ display: 'flex', gap: '2rem' }} className="desktop-menu">
@@ -64,46 +77,44 @@ const Navbar = () => {
                             href={link.href}
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{ delay: index * 0.08 }}
                             style={{
-                                fontWeight: '500',
-                                fontSize: '0.9rem',
-                                color: 'var(--text-muted)',
-                                transition: 'color 0.3s'
+                                fontWeight: '700',
+                                fontSize: '0.82rem',
+                                color: '#0A0A0A',
+                                textTransform: 'uppercase',
+                                letterSpacing: '0.06em',
+                                paddingBottom: '3px',
+                                borderBottom: '3px solid transparent',
+                                transition: 'border-color 0.15s ease'
                             }}
-                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
-                            onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
+                            onMouseEnter={e => e.target.style.borderBottomColor = '#FFE500'}
+                            onMouseLeave={e => e.target.style.borderBottomColor = 'transparent'}
                         >
                             {link.name}
                         </motion.a>
                     ))}
                 </div>
 
-                {/* Mobile Toggle Button */}
-                <button 
-                    className="mobile-menu-btn"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                {/* Mobile Toggle */}
+                <button className="mobile-menu-btn" onClick={() => setIsOpen(!isOpen)}>
+                    {isOpen ? <X size={22} /> : <Menu size={22} />}
                 </button>
             </div>
 
-            {/* Mobile Menu Dropdown */}
+            {/* Mobile Dropdown */}
             {isOpen && (
-                <motion.div 
-                    initial={{ opacity: 0, y: -20 }}
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
+                    exit={{ opacity: 0, y: -10 }}
                     className="mobile-menu"
                 >
-                    {navLinks.map((link) => (
+                    {navLinks.map(link => (
                         <a
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            style={{ transition: 'color 0.3s' }}
-                            onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
-                            onMouseLeave={(e) => e.target.style.color = 'var(--text-main)'}
                         >
                             {link.name}
                         </a>

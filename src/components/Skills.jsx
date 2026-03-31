@@ -3,49 +3,19 @@ import { motion } from 'framer-motion';
 import content from '../content.json';
 
 const categoryConfig = {
-    Programming: {
-        color: '#f97316',
-        bg: 'rgba(249,115,22,0.1)',
-        border: 'rgba(249,115,22,0.25)',
-        icon: '⚡',
-        gradient: 'linear-gradient(135deg, rgba(249,115,22,0.15), rgba(249,115,22,0.03))'
-    },
-    Frontend: {
-        color: '#38bdf8',
-        bg: 'rgba(56,189,248,0.1)',
-        border: 'rgba(56,189,248,0.25)',
-        icon: '🎨',
-        gradient: 'linear-gradient(135deg, rgba(56,189,248,0.15), rgba(56,189,248,0.03))'
-    },
-    Backend: {
-        color: '#22c55e',
-        bg: 'rgba(34,197,94,0.1)',
-        border: 'rgba(34,197,94,0.25)',
-        icon: '🛠',
-        gradient: 'linear-gradient(135deg, rgba(34,197,94,0.15), rgba(34,197,94,0.03))'
-    },
-    Design: {
-        color: '#a855f7',
-        bg: 'rgba(168,85,247,0.1)',
-        border: 'rgba(168,85,247,0.25)',
-        icon: '🎬',
-        gradient: 'linear-gradient(135deg, rgba(168,85,247,0.15), rgba(168,85,247,0.03))'
-    },
-    Hobby: {
-        color: '#ec4899',
-        bg: 'rgba(236,72,153,0.1)',
-        border: 'rgba(236,72,153,0.25)',
-        icon: '📷',
-        gradient: 'linear-gradient(135deg, rgba(236,72,153,0.15), rgba(236,72,153,0.03))'
-    },
+    Programming: { topBorder: '#FF6B35', iconBg: '#FF6B35', pillBg: '#FF6B35', pillColor: '#FFFFFF', icon: '⚡' },
+    Frontend:    { topBorder: '#00D4FF', iconBg: '#00D4FF', pillBg: '#00D4FF', pillColor: '#0A0A0A', icon: '🎨' },
+    Backend:     { topBorder: '#00FF88', iconBg: '#00FF88', pillBg: '#00FF88', pillColor: '#0A0A0A', icon: '🛠' },
+    Design:      { topBorder: '#FF3366', iconBg: '#FF3366', pillBg: '#FF3366', pillColor: '#FFFFFF', icon: '🎬' },
+    Hobby:       { topBorder: '#FFE500', iconBg: '#FFE500', pillBg: '#FFE500', pillColor: '#0A0A0A', icon: '📷' },
 };
 
 const skillIcons = {
     'Java Script': '🟨',
-    'TypeScript': '🔷',
-    'ReactJS': '⚛️',
-    'NodeJS': '🟩',
-    'Java': '☕',
+    'TypeScript':  '🔷',
+    'ReactJS':     '⚛️',
+    'NodeJS':      '🟩',
+    'Java':        '☕',
     'video editing': '🎬',
     'Photography': '📷',
 };
@@ -66,14 +36,12 @@ const Skills = () => {
                     viewport={{ once: true }}
                     style={{ textAlign: 'center', marginBottom: '4rem' }}
                 >
-                    <p style={{ color: 'var(--primary)', fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: '0.75rem' }}>
-                        What I Know
-                    </p>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '1rem' }}>
-                        Tech <span className="gradient-text">Arsenal</span>
+                    <span className="section-label">What I Know</span>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '900', marginBottom: '1rem' }}>
+                        Tech <span className="section-title-underline">Arsenal</span>
                     </h2>
-                    <p style={{ color: 'var(--text-muted)', maxWidth: '560px', margin: '0 auto' }}>
-                        Technologies, tools, and skills I've sharpened through real-world projects and production systems.
+                    <p style={{ color: '#555555', maxWidth: '560px', margin: '0 auto' }}>
+                        Technologies and tools I've used in real projects and production systems.
                     </p>
                 </motion.div>
 
@@ -81,11 +49,7 @@ const Skills = () => {
                 <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.75rem' }}>
                     {categories.map((category, catIndex) => {
                         const config = categoryConfig[category] || {
-                            color: 'var(--primary)',
-                            bg: 'rgba(239,68,68,0.1)',
-                            border: 'rgba(239,68,68,0.25)',
-                            icon: '🔧',
-                            gradient: 'linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.02))'
+                            topBorder: '#FFE500', iconBg: '#FFE500', pillBg: '#FFE500', pillColor: '#0A0A0A', icon: '🔧'
                         };
                         const categorySkills = skills.filter(s => s.category === category);
 
@@ -96,43 +60,23 @@ const Skills = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: catIndex * 0.1 }}
                                 viewport={{ once: true }}
-                                whileHover={{ y: -5 }}
+                                whileHover={{ x: 4, y: 4, boxShadow: '0 0 0 #000' }}
                                 style={{
-                                    background: config.gradient,
-                                    border: `1px solid ${config.border}`,
-                                    borderRadius: '1.25rem',
+                                    backgroundColor: '#FFFFFF',
+                                    border: '2px solid #000',
+                                    boxShadow: '4px 4px 0 #000',
+                                    borderTop: `4px solid ${config.topBorder}`,
+                                    borderRadius: '0',
                                     padding: '1.75rem',
-                                    position: 'relative',
-                                    overflow: 'hidden',
-                                    transition: 'box-shadow 0.3s ease'
-                                }}
-                                onMouseEnter={e => {
-                                    e.currentTarget.style.boxShadow = `0 16px 40px ${config.bg}`;
-                                }}
-                                onMouseLeave={e => {
-                                    e.currentTarget.style.boxShadow = 'none';
+                                    transition: 'transform 0.15s ease, box-shadow 0.15s ease'
                                 }}
                             >
-                                {/* Glow in corner */}
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '-20px',
-                                    right: '-20px',
-                                    width: '80px',
-                                    height: '80px',
-                                    borderRadius: '50%',
-                                    backgroundColor: config.color,
-                                    filter: 'blur(40px)',
-                                    opacity: 0.2,
-                                    pointerEvents: 'none'
-                                }}></div>
-
                                 {/* Category header */}
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1.5rem' }}>
                                     <div style={{
-                                        backgroundColor: config.bg,
-                                        border: `1px solid ${config.border}`,
-                                        borderRadius: '0.65rem',
+                                        backgroundColor: config.iconBg,
+                                        border: '2px solid #000',
+                                        borderRadius: '0',
                                         padding: '0.5rem',
                                         fontSize: '1.1rem',
                                         lineHeight: 1,
@@ -143,22 +87,22 @@ const Skills = () => {
                                     </div>
                                     <div>
                                         <h3 style={{
-                                            fontSize: '1rem',
-                                            fontWeight: '700',
-                                            color: config.color,
+                                            fontSize: '0.88rem',
+                                            fontWeight: '800',
+                                            color: '#0A0A0A',
                                             textTransform: 'uppercase',
-                                            letterSpacing: '0.08em'
+                                            letterSpacing: '0.1em'
                                         }}>
                                             {category}
                                         </h3>
-                                        <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>
+                                        <span style={{ fontSize: '0.7rem', color: '#555555', fontWeight: '500' }}>
                                             {categorySkills.length} {categorySkills.length === 1 ? 'skill' : 'skills'}
                                         </span>
                                     </div>
                                 </div>
 
                                 {/* Skill pills */}
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem' }}>
                                     {categorySkills.map((skill, i) => (
                                         <motion.div
                                             key={skill.name}
@@ -166,24 +110,23 @@ const Skills = () => {
                                             whileInView={{ opacity: 1, scale: 1 }}
                                             transition={{ delay: catIndex * 0.1 + i * 0.05 }}
                                             viewport={{ once: true }}
-                                            whileHover={{ scale: 1.08, backgroundColor: config.bg }}
+                                            whileHover={{ scale: 1.06 }}
                                             style={{
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 gap: '0.4rem',
-                                                padding: '0.5rem 1rem',
-                                                backgroundColor: 'rgba(255,255,255,0.04)',
-                                                border: `1px solid ${config.border}`,
-                                                borderRadius: '2rem',
-                                                fontSize: '0.85rem',
-                                                fontWeight: '600',
-                                                color: 'var(--text-main)',
+                                                padding: '0.45rem 0.9rem',
+                                                backgroundColor: config.pillBg,
+                                                border: '1px solid #000',
+                                                borderRadius: '0',
+                                                fontSize: '0.82rem',
+                                                fontWeight: '700',
+                                                color: config.pillColor,
                                                 cursor: 'default',
-                                                transition: 'all 0.2s ease',
-                                                backdropFilter: 'blur(8px)'
+                                                transition: 'transform 0.15s ease'
                                             }}
                                         >
-                                            <span style={{ fontSize: '0.9rem' }}>{skillIcons[skill.name] || '•'}</span>
+                                            <span style={{ fontSize: '0.85rem' }}>{skillIcons[skill.name] || '•'}</span>
                                             {skill.name}
                                         </motion.div>
                                     ))}
@@ -193,25 +136,26 @@ const Skills = () => {
                     })}
                 </div>
 
-                {/* Bottom strip — also learning */}
+                {/* Also worked with strip */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                     viewport={{ once: true }}
                     style={{
-                        marginTop: '3rem',
+                        marginTop: '2.5rem',
                         padding: '1.5rem 2rem',
-                        background: 'rgba(255,255,255,0.02)',
-                        border: '1px solid var(--glass-border)',
-                        borderRadius: '1rem',
+                        backgroundColor: '#FFFFFF',
+                        border: '2px solid #000',
+                        boxShadow: '4px 4px 0 #000',
+                        borderRadius: '0',
                         display: 'flex',
                         alignItems: 'center',
-                        gap: '1rem',
+                        gap: '0.75rem',
                         flexWrap: 'wrap'
                     }}
                 >
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.1em', whiteSpace: 'nowrap' }}>
+                    <span style={{ fontSize: '0.72rem', color: '#0A0A0A', fontWeight: '800', textTransform: 'uppercase', letterSpacing: '0.12em', whiteSpace: 'nowrap' }}>
                         Also worked with:
                     </span>
                     {['PostgreSQL', 'Azure DevOps', 'GitHub Actions', 'Docker', 'Grafana', 'REST APIs', 'CI/CD', 'Git'].map((tool, i) => (
@@ -219,16 +163,16 @@ const Skills = () => {
                             key={tool}
                             initial={{ opacity: 0 }}
                             whileInView={{ opacity: 1 }}
-                            transition={{ delay: i * 0.05 }}
+                            transition={{ delay: i * 0.04 }}
                             viewport={{ once: true }}
                             style={{
-                                fontSize: '0.78rem',
-                                color: 'var(--text-muted)',
-                                backgroundColor: 'rgba(255,255,255,0.04)',
-                                border: '1px solid var(--glass-border)',
-                                padding: '0.3rem 0.8rem',
-                                borderRadius: '2rem',
-                                fontWeight: '500'
+                                fontSize: '0.75rem',
+                                color: '#0A0A0A',
+                                backgroundColor: '#F0F0F0',
+                                border: '1px solid #000',
+                                padding: '0.28rem 0.75rem',
+                                borderRadius: '0',
+                                fontWeight: '600'
                             }}
                         >
                             {tool}
