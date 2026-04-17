@@ -22,8 +22,8 @@ const techColors = {
 };
 
 const projectCategories = {
-    1: 'Backend', 2: 'Frontend', 3: 'Backend',
-    4: 'Backend', 5: 'Full Stack', 6: 'Frontend', 7: 'Backend',
+    1: 'Backend', 2: 'Backend', 3: 'Backend',
+    4: 'Frontend', 5: 'Backend', 6: 'Full Stack', 7: 'Frontend', 8: 'Backend', 9: 'Frontend',
 };
 
 const filters = ['All', 'Backend', 'Frontend', 'Full Stack'];

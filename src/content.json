@@ -44,61 +44,66 @@
   "projects": [
     {
       "id": 1,
+      "title": "Natours REST API",
+      "description": "Production-ready REST API for a tour booking platform. Features JWT auth, role-based access control, password reset via email, filtering/sorting/pagination, MongoDB aggregation pipelines, and security best practices.",
+      "tech": ["NodeJS", "Express", "MongoDB"],
+      "link": ""
+    },
+    {
+      "id": 2,
       "title": "Gemini Chatbot",
       "description": "Built a REST API using Spring Boot with a clean controller/service pattern; integrated Google Gemini API to handle AI prompt requests.",
       "tech": ["Java", "Spring Boot", "Gemini API"],
       "link": "https://github.com/Karthick3800/Gemini-Chatbot"
     },
     {
-      "id": 2,
+      "id": 3,
+      "title": "DocFlow Rule Engine Component",
+      "description": "Engineered rule-processing logic and modular Express middleware in TypeScript, integrating Azure Document Intelligence REST API.",
+      "tech": ["Node.js", "Express", "TypeScript", "Azure AI"],
+      "link": ""
+    },
+    {
+      "id": 4,
       "title": "Southern Spice UI",
       "description": "A modern, responsive restaurant web application emphasizing efficient data management through props and a robust component structure.",
       "tech": ["ReactJS", "CSS"],
       "link": "https://github.com/Karthick3800/Southern-Spice"
     },
     {
-      "id": 3,
-      "title": "DocFlow Rule Engine Component",
-      "description": "Engineered rule-processing logic and modular Express middleware in TypeScript, integrating Azure Document Intelligence REST API.",
-      "tech": [
-        "Node.js",
-        "Express",
-        "TypeScript",
-        "Azure AI",
-        "Grafana",
-        "CI/CD",
-        "MongoDB",
-        "SQL"
-      ],
-      "link": ""
-    },
-    {
-      "id": 4,
+      "id": 5,
       "title": "Railway Ticket Reservation",
       "description": "A comprehensive system offering features like ticket booking, cancellation, waiting list management, and RAC.",
       "tech": ["Java"],
       "link": "https://github.com/Karthick3800/RailwayTicket-Management-System"
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "QR Code Generator",
       "description": "A responsive and interactive QR code generator built with NodeJS, HTML, and CSS.",
       "tech": ["NodeJS", "HTML", "CSS"],
       "link": "https://github.com/Karthick3800/Qr-Code-generator"
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "FarAway",
       "description": "A React-based tour packing list application utilizing state management to streamline packing with interactive item tracking.",
       "tech": ["ReactJS"],
       "link": "https://karthick-faraway.netlify.app/"
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "URL Shortener",
       "description": "A fast and efficient URL shortener service to generate and manage compact links.",
       "tech": ["NodeJS", "Express"],
       "link": "https://github.com/Karthick3800/urlShortner"
+    },
+    {
+      "id": 9,
+      "title": "Banklist",
+      "description": "An interactive banking UI application to manage accounts, track transactions, and handle transfers with a clean interface.",
+      "tech": ["ReactJS"],
+      "link": "https://banklist-iota.vercel.app/"
     }
   ]
 }
