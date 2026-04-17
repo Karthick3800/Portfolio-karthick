@@ -103,7 +103,8 @@
       "title": "Banklist",
       "description": "An interactive banking UI application to manage accounts, track transactions, and handle transfers with a clean interface.",
       "tech": ["ReactJS"],
-      "link": "https://banklist-iota.vercel.app/"
+      "link": "https://banklist-iota.vercel.app/",
+      "github": "https://github.com/Karthick3800/BANKLIST"
     }
   ]
 }

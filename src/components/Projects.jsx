@@ -182,36 +182,64 @@ const Projects = () => {
                                             })}
                                         </div>
 
-                                        {/* Link button */}
-                                        {project.link && (
-                                            <motion.a
-                                                href={project.link}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                whileHover={{ x: 3, y: 3, boxShadow: '0 0 0 #000' }}
-                                                style={{
-                                                    display: 'inline-flex',
-                                                    alignItems: 'center',
-                                                    gap: '0.4rem',
-                                                    fontSize: '0.75rem',
-                                                    fontWeight: '800',
-                                                    color: '#0A0A0A',
-                                                    backgroundColor: '#FFFFFF',
-                                                    border: '2px solid #000',
-                                                    boxShadow: '3px 3px 0 #000',
-                                                    padding: '0.4rem 0.9rem',
-                                                    borderRadius: '0',
-                                                    textTransform: 'uppercase',
-                                                    letterSpacing: '0.05em',
-                                                    transition: 'transform 0.15s ease, box-shadow 0.15s ease',
-                                                    textDecoration: 'none',
-                                                    alignSelf: 'flex-start'
-                                                }}
-                                            >
-                                                {project.link.includes('github') ? <Github size={13} /> : <ExternalLink size={13} />}
-                                                {project.link.includes('github') ? 'GitHub' : 'Live'}
-                                            </motion.a>
-                                        )}
+                                        {/* Link buttons */}
+                                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                            {project.link && (
+                                                <motion.a
+                                                    href={project.link}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    whileHover={{ x: 3, y: 3, boxShadow: '0 0 0 #000' }}
+                                                    style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: '0.4rem',
+                                                        fontSize: '0.75rem',
+                                                        fontWeight: '800',
+                                                        color: '#0A0A0A',
+                                                        backgroundColor: project.github ? '#FFE500' : '#FFFFFF',
+                                                        border: '2px solid #000',
+                                                        boxShadow: '3px 3px 0 #000',
+                                                        padding: '0.4rem 0.9rem',
+                                                        borderRadius: '0',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.05em',
+                                                        transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+                                                        textDecoration: 'none'
+                                                    }}
+                                                >
+                                                    {project.link.includes('github') ? <Github size={13} /> : <ExternalLink size={13} />}
+                                                    {project.link.includes('github') ? 'GitHub' : 'Live'}
+                                                </motion.a>
+                                            )}
+                                            {project.github && (
+                                                <motion.a
+                                                    href={project.github}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    whileHover={{ x: 3, y: 3, boxShadow: '0 0 0 #000' }}
+                                                    style={{
+                                                        display: 'inline-flex',
+                                                        alignItems: 'center',
+                                                        gap: '0.4rem',
+                                                        fontSize: '0.75rem',
+                                                        fontWeight: '800',
+                                                        color: '#0A0A0A',
+                                                        backgroundColor: '#FFFFFF',
+                                                        border: '2px solid #000',
+                                                        boxShadow: '3px 3px 0 #000',
+                                                        padding: '0.4rem 0.9rem',
+                                                        borderRadius: '0',
+                                                        textTransform: 'uppercase',
+                                                        letterSpacing: '0.05em',
+                                                        transition: 'transform 0.15s ease, box-shadow 0.15s ease',
+                                                        textDecoration: 'none'
+                                                    }}
+                                                >
+                                                    <Github size={13} /> GitHub
+                                                </motion.a>
+                                            )}
+                                        </div>
                                     </div>
                                 </motion.div>
                             );
