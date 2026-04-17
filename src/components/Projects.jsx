@@ -17,13 +17,17 @@ const techColors = {
     'Gemini API':  { bg: '#FF3366', color: '#FFFFFF' },
     'MongoDB':     { bg: '#00FF88', color: '#0A0A0A' },
     'SQL':         { bg: '#FFE500', color: '#0A0A0A' },
-    'CI/CD':       { bg: '#FF3366', color: '#FFFFFF' },
-    'Grafana':     { bg: '#FF6B35', color: '#FFFFFF' },
+    'CI/CD':              { bg: '#FF3366', color: '#FFFFFF' },
+    'Grafana':            { bg: '#FF6B35', color: '#FFFFFF' },
+    'JavaScript':         { bg: '#FFE500', color: '#0A0A0A' },
+    'Google Apps Script': { bg: '#00FF88', color: '#0A0A0A' },
+    'Gmail API':          { bg: '#FF3366', color: '#FFFFFF' },
+    'Google Sheets':      { bg: '#00D4FF', color: '#0A0A0A' },
 };
 
 const projectCategories = {
     1: 'Backend', 2: 'Backend', 3: 'Backend',
-    4: 'Frontend', 5: 'Backend', 6: 'Full Stack', 7: 'Frontend', 8: 'Backend', 9: 'Frontend',
+    4: 'Frontend', 5: 'Backend', 6: 'Full Stack', 7: 'Frontend', 8: 'Backend', 9: 'Frontend', 10: 'Backend',
 };
 
 const filters = ['All', 'Backend', 'Frontend', 'Full Stack'];
@@ -96,7 +100,7 @@ const Projects = () => {
                 </motion.div>
 
                 {/* Project grid */}
-                <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))', gap: '2rem' }}>
+                <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '2rem', alignItems: 'start' }}>
                     <AnimatePresence mode="popLayout">
                         {filtered.map((project, index) => {
                             const num = String(project.id).padStart(2, '0');
@@ -183,7 +187,7 @@ const Projects = () => {
                                         </div>
 
                                         {/* Link buttons */}
-                                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                                        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: 'auto' }}>
                                             {project.link && (
                                                 <motion.a
                                                     href={project.link}

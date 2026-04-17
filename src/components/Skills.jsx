@@ -46,7 +46,7 @@ const Skills = () => {
                 </motion.div>
 
                 {/* Category cards */}
-                <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.75rem' }}>
+                <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.75rem', alignItems: 'start' }}>
                     {categories.map((category, catIndex) => {
                         const config = categoryConfig[category] || {
                             topBorder: '#FFE500', iconBg: '#FFE500', pillBg: '#FFE500', pillColor: '#0A0A0A', icon: '🔧'

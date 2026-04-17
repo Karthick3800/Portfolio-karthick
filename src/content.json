@@ -105,6 +105,13 @@
       "tech": ["ReactJS"],
       "link": "https://banklist-iota.vercel.app/",
       "github": "https://github.com/Karthick3800/BANKLIST"
+    },
+    {
+      "id": 10,
+      "title": "AutoRecon — Debit Card Tracker",
+      "description": "Google Apps Script automation that scans Gmail for HDFC bank alerts, logs transactions to Google Sheets, and sends daily email reports with UPI QR codes to transfer savings.",
+      "tech": ["Google Apps Script", "Gmail API", "Google Sheets", "JavaScript"],
+      "link": ""
     }
   ]
 }

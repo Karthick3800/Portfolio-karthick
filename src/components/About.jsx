@@ -20,7 +20,7 @@ const About = () => {
     return (
         <section id="about" style={{ padding: '100px 0' }}>
             <div className="container">
-                <div className="about-container" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '4rem', alignItems: 'start' }}>
+                <div className="about-container" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr) minmax(0,1fr)', gap: '4rem', alignItems: 'stretch' }}>
 
                     {/* Left — Bio */}
                     <motion.div
@@ -28,6 +28,7 @@ const About = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
+                        style={{ display: 'flex', flexDirection: 'column' }}
                     >
                         <span className="section-label">Who I Am</span>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginBottom: '1.75rem' }}>
@@ -51,7 +52,8 @@ const About = () => {
                             boxShadow: '6px 6px 0 #000',
                             borderTop: '4px solid #FFE500',
                             padding: '2rem',
-                            borderRadius: '0'
+                            borderRadius: '0',
+                            flex: 1
                         }}>
                             <p style={{ fontSize: '1rem', color: '#0A0A0A', marginBottom: '1.25rem', lineHeight: '1.85' }}>
                                 {personalInfo.bio}
@@ -70,7 +72,7 @@ const About = () => {
                         transition={{ duration: 0.7, delay: 0.2 }}
                         viewport={{ once: true }}
                         className="about-highlights"
-                        style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem' }}
+                        style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.25rem', alignItems: 'start' }}
                     >
                         {highlights.map((item, index) => {
                             const accent = highlightAccents[index];

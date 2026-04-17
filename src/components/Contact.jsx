@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion'; // eslint-disable-line no-unused-vars
-import { Mail, MapPin, Github, Linkedin, Copy, Check } from 'lucide-react';
+import { Mail, MapPin, GitBranch, Briefcase, Copy, Check } from 'lucide-react';
 import content from '../content.json';
 
 const cardAccents = ['#FFE500', '#00D4FF', '#00FF88', '#FF3366'];
@@ -35,7 +35,7 @@ const Contact = () => {
             label: 'GitHub',
             value: 'View my work',
             sub: 'Karthick3800',
-            icon: <Github size={22} />,
+            icon: <GitBranch size={22} />,
             href: personalInfo.socials.github,
             external: true,
         },
@@ -43,7 +43,7 @@ const Contact = () => {
             label: 'LinkedIn',
             value: 'Connect with me',
             sub: 'karthick233',
-            icon: <Linkedin size={22} />,
+            icon: <Briefcase size={22} />,
             href: personalInfo.socials.linkedin,
             external: true,
         },
@@ -77,7 +77,7 @@ const Contact = () => {
                     transition={{ duration: 0.6, delay: 0.15 }}
                     viewport={{ once: true }}
                     className="contact-grid"
-                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto' }}
+                    style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '1.5rem', maxWidth: '1000px', margin: '0 auto', alignItems: 'start' }}
                 >
                     {cards.map((card, i) => {
                         const accent = cardAccents[i];
